@@ -35,7 +35,7 @@ header p {
 }
 
 .info {
-    height: 25%;
+    height: 100%;
     background-color: rgb(216, 216, 216);
     color: black;
     text-align: center;
@@ -48,4 +48,48 @@ header p {
 .sites a img {
     width: 100%;
     height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .content {
+        flex-flow: column;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .content {
+        flex-flow: column;
+    }
+
+    .info p {
+        padding: 2px;
+    }
+
+    .info h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .info h1 {
+        font-size: 25px;
+    }
+
+    .sites {
+        padding: 25px;
+    }
+
+    header p {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header p {
+        font-size: 20px;
+    }
+
+    header {
+        padding: 0 25px;
+    }
 }
