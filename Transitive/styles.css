@@ -1,0 +1,652 @@
+/* general styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.bg {
+    background-image: url("https://source.unsplash.com/h7rOzTmGxWE/1920x1080");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Roboto", sans-serif;
+}
+
+section { 
+    display: flex;
+    min-width: 100vw;
+    background-color: #f2f2f2;
+    padding: 100px 0;
+}
+
+h3 {
+    font-size: 35px;
+}
+
+p {
+    font-size: 17px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+hr {
+    border: 0;
+    width:80%;
+    margin: 0 auto;
+    height: 1px;
+    margin-top: 25px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.subtitle {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.midway {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 400px;
+    color: white;
+}
+
+.midway h3 {
+    font-size: 40px;
+}
+
+.midway p {
+    font-size: 20px;
+}
+
+/* header styles */
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    color: white;
+    min-width: 100vw;
+    animation: 1s linear title-fade 1s forwards;
+}
+
+header h3 {
+    margin-right: 50px;
+}
+
+header ul {
+    margin-left: 50px;
+    flex-direction: column;
+}
+
+header ul li {
+    background-color: white;;
+    width: 25px;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+}
+
+/* JS class */
+.scroll-bg {
+    animation: 1s linear scrollFade 1s forwards;
+}
+
+.opacity-0 {
+    opacity: 0;
+    padding-top: 100px;
+}
+
+.opacity-1 {
+    opacity: 1;
+    padding-top: 0;
+}
+
+@keyframes scrollFade {
+    100% {
+        background-color: rgba(0, 0, 0, 1);
+    }
+}
+
+/* sideNav styles */
+.sideNav {
+    display: flex;
+    position: absolute;
+    position: fixed;
+    background-color: transparent;
+    opacity: 0;
+    width: 0px;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.sideNav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto 0 auto;
+    width: 100%;
+}
+
+.sideNav hr {
+    width: 85%;
+    margin-bottom: 25px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+.sideNav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.sideNav i {
+    color: white;
+}
+
+.sideNav i:hover,
+.sideNav ul li a:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.slideIn {
+    animation: 1s navSlideIn forwards;
+}
+
+.slideOut {
+    animation: 1s navSlideOut forwards;
+}
+
+@keyframes navSlideOut {
+    100% {
+        opacity: 1;
+        width: 250px;
+    }
+}
+
+@keyframes navSlideIn {
+    0% {
+        opacity: 1;
+        width: 250px;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        width: 0px;
+    }
+}
+
+/* jumbotron styles */
+.jumbotron {
+    position: relative;
+    z-index: -1;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("https://source.unsplash.com/Qq7A85iCzhQ/1920x1080");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.jumbotron .title {
+    text-align: center;
+    margin-top: 225px;
+    padding-top: 100px;
+    opacity: 0;
+    animation: 1.2s linear title-fade 1.5s forwards;
+}
+
+.jumbotron .title h1 {
+    font-size: 80px;
+    padding-bottom: 25px;
+}
+
+.jumbotron .title h3 {
+    padding-bottom: 25px;
+}
+
+.jumbotron .title button {
+    width: 200px;
+    height: 75px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.jumbotron .title button:hover {
+    animation: 1s btn-fade forwards;
+}
+
+@keyframes btn-fade {
+    100% {
+        background: rgba(0, 0, 0, 0.2);
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+@keyframes title-fade {
+    100% {
+        opacity: 1;
+        padding-top: 0;
+    }
+}
+
+/* intro styles */
+.intro {
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.intro-img {
+    width: 50%;
+    height: 100%;
+}
+
+.intro-p {
+    width: 50%;
+}
+
+.intro h3 {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.intro .subtitle {
+    padding-top: 15px;
+}
+
+.intro p {
+    padding: 25px 40px 0 40px; 
+}
+
+/* info styles */
+.info ul {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.info ul li {
+    width: 30%;
+    text-align: center;
+    padding: 0 35px 0 35px;
+}
+
+.info ul h3 {
+    padding-bottom: 15px;
+}
+
+.info button {
+    margin-top: 25px;
+    padding: 15px;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.info button:hover {
+    animation: 1s info-btn forwards;
+}
+
+@keyframes info-btn {
+    100% {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.border {
+    border-right: 1px solid rgba(255, 255, 255, .6);
+}
+
+/* transportation styles */
+.transportation ul {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.transportation li {
+    background-color: white;
+    width: 46%;
+    text-align: center;
+}
+
+.transportation ul img {
+    width: 100%;
+    height: 50%;
+}
+
+.transportation li h3 {
+    padding-top: 25px;
+}
+
+.transportation p {
+    padding: 15px 40px 0 40px;;
+    font-size: 20px;
+    
+}
+
+.transportation .food {
+    padding-top: 25px;
+}
+
+/* info2 styles */
+.info2 {
+    text-align: center;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.info2 p {
+    width: 80%;   
+}
+
+/* photos styles */
+.photos ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.photos li {
+    height: 500px;
+    margin: 10px;
+}
+
+.photos ul li.small {
+    flex-basis: 35%;
+}
+
+.photos ul li.large {
+    flex-basis: 55%;
+}
+
+.photos ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+/* newsletter styles */
+.newsletter {
+    color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter p {
+    margin-top: 15px;
+}
+
+.newsletter hr {
+    width: 50%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+form {
+    flex-direction: row;
+}
+
+.newsletter input[type='email'] {
+    margin-top: 25px;
+    padding-left: 10px;
+    width: 300px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+::placeholder {
+    color: white;
+}
+
+.newsletter button {
+    width: 100px;
+    height: 50px;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.newsletter button:hover {
+    animation: 1s info-btn forwards;
+}
+
+
+/* footer styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul {
+    margin-right: 10px;
+}
+
+footer p {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+footer ul li i {
+    color: white;
+    margin: 0 5px;
+}
+
+/* media queries */
+@media screen and (max-width: 1600px) {
+    .transportation ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .transportation li {
+        width: 75%;
+        margin-bottom: 25px;
+    }
+
+    .transportation ul li #fd {
+        padding-bottom: 50px;
+    }
+    #fd {
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 1470px) {
+    .info ul h3 {
+        font-size: 30px;
+    }
+    
+    .info ul p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    .photos ul {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .intro {
+        flex-direction: column;
+        padding-bottom: 150px;
+    }
+
+    .intro-img {
+        width: 100%;
+    }
+
+    .intro-p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .photos ul {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .info ul {
+        width: 100%;    
+        padding: 0;
+    }
+
+    .info ul li p {
+        font-size: 15px;
+    }
+
+    .info ul li h3 {
+        font-size: 20px;
+    }
+    .intro {
+        width: 80%;
+        padding-bottom: 0;
+        height: 50%;
+    }
+    .intro-img {
+        width: 100%;
+        height: 40%;
+    }
+    .intro-p {
+        width: 100%;
+    }
+    .transportation ul {
+        width: 80%;
+    }
+    .transportation ul li {
+        width: 100%;
+    }
+    .photos ul {
+        width: 100%;
+    }
+    footer p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .jumbotron .title {
+        margin-top: 50px;
+    }
+    
+    .jumbotron .title h1 {
+        font-size: 40px;
+    }
+
+    .jumbotron .title h3 {
+        font-size: 25px;
+    }
+
+    .jumbotron .title button {
+        width: 150px;
+        height: 50px;
+        font-size: 15px;
+    }
+    
+    .photos ul li.small {
+        flex-basis: 100%;
+    }
+    
+    .photos ul li.large {
+        flex-basis: 100%;
+    }
+    .info {
+        height: 100%;
+    }
+    .info ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .info ul li {
+        width: 75%;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+    .border {
+        border: none;
+    }
+}
+@media screen and (max-width: 610px) {
+    .newsletter h3 {
+        font-size: 25px;
+    }
+    .newsletter p {
+        font-size: 15px;
+    }
+    .midway h3 {
+        font-size: 25px;
+    }
+    .midway p {
+        font-size: 15px;
+    }
+    footer p {
+        font-size: 10px;
+    }
+    .info button {
+        width: 100px;
+        height: 50px;
+        font-size: 10px;
+    }
+    .intro .intro-p h3,
+    .transportation ul li h3 {
+        font-size: 25px;
+    }
+
+    .intro .intro-p p,
+    .transportation ul li p {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 420px) {
+    .newsletter h3 {
+        font-size: 20px;
+    }
+    .newsletter p {
+        font-size: 12px;
+    }
+    form {
+        flex-direction: column;
+        text-align: center;
+    }
+    form button {
+        margin-top: 25px;
+    }
+    header h3 {
+        font-size: 30px;
+    }
+    .sideNav 
+}
+
+
+
+
+
+
+
+
+
+
